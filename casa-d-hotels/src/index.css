@@ -1,68 +1,171 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss";
+/* fonts */
+@font-face {
+  font-family: Futura PT;
+  src: url(assets/fonts/Futura-Font/Futura\ Font.ttf) format("truetype");
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf)
+    format("truetype");
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@font-face {
+  font-family: "La Bohemienne";
+  src: url(assets/fonts/La-bohemienne/la-bohemienne-deluxe.otf)
+    format("opentype");
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.ff-bohemienne {
+  font-family: "La Bohemienne";
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.ff-futura {
+  font-family: "Futura PT";
+}
+
+.ff-cormorant {
+  font-family: "Cormorant Garamond";
+}
+
+/* colors */
+.text-cream {
+  color: #f9f0ec;
+}
+
+
+/* margins */
+.margin-left-custom {
+    margin-left: calc((100% - 1200px) / 2);
+}
+
+/* positions */
+.top-7rem{
+  top: -7rem;
+}
+
+/* background */
+.bg-naples {
+  background: linear-gradient(
+      180deg,
+      #181d24 1.11%,
+      rgba(24, 29, 36, 0.87) 25.83%,
+      rgba(24, 29, 36, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(24, 29, 36, 0.4) 0%, rgba(24, 29, 36, 0.4) 100%),
+    url(assets/images/naples-hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-nightblue{
+  background: #181D24;
+}
+
+/* menu header */
+#nav-icon {
+  width: 13px;
+  height: 8px;
+  position: relative;
+  margin: 2px auto;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #ca9d75;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 4px;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 8px;
+  transform-origin: left center;
+}
+
+#nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 0px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 8.5px;
+  left: 0px;
+}
+
+#menu-casaD {
+  opacity: 0;
+  transform: translateY(-10px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+#menu-casaD.menu-in.menu-out {
+  animation: fadeOut 0.6s ease-out forwards;
+}
+
+#menu-casaD.menu-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  pointer-events: auto;
+}
+
+/* slider */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-horizontal 40s linear infinite;
+}
+
+.slider-item {
+  flex-shrink: 0;
+  width: 300px; /* o qualsiasi larghezza ti serva */
+  height: 450px;
+  margin-right: 2rem;
+}
+
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animazione */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    transform: translateX(-50%);
   }
 }
