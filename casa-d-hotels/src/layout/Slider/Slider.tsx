@@ -1,4 +1,3 @@
-import "react-slideshow-image/dist/styles.css";
 import Img1 from "../../assets/images/naples-marquee-1.jpg";
 import Img2 from "../../assets/images/naples-marquee-2.jpg";
 import Img3 from "../../assets/images/naples-marquee-3.jpg";

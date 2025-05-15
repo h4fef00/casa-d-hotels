@@ -1,16 +1,22 @@
+// Images
 import logo from "../../assets/logos/naples-logo.svg";
+// Translate
 import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 
-function Header({contacts}) {
-  function toggleMenu(event) {
-    const navIcon = event.currentTarget.querySelector("#nav-icon");
-    const menu = event.currentTarget.querySelector("#menu-casaD");
-    navIcon.classList.toggle("open");
-    menu.classList.toggle("menu-out");
-  }
+type Prop = {
+  contacts: string;
+};
+
+function Header({ contacts }: Prop) {
+  // function toggleMenu(event) {
+  //   const navIcon = event.currentTarget.querySelector("#nav-icon");
+  //   const menu = event.currentTarget.querySelector("#menu-casaD");
+  //   navIcon.classList.toggle("open");
+  //   menu.classList.toggle("menu-out");
+  // }
   return (
     <header className="uppercase w-full h-full">
-      <nav className="position-relative mt-[3.25rem] mr-auto ml-auto px-[1.5rem] max-w-7xl text-xs ff-futura text-cream text-xs flex flex-row justify-between items-center basis-auto lg:basis-1/3">
+      <nav className="position-relative mt-12 mx-auto px-[1.5rem] max-w-screen-xl ff-futura text-cream text-xs flex flex-row justify-between items-center basis-auto lg:basis-1/3">
         {/* menu e contatti */}
         <div className="flex justify-end items-center">
           <div className="position-relative">

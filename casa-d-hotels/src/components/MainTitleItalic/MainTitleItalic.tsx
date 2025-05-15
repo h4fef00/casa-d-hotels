@@ -1,7 +1,15 @@
-function MainTitleItalic({ text, section, textColor = "text-[#CA9D75]" }) {
+type Prop = {
+  text: string;
+  fontSize: string;
+  textColor?: string;
+}
+
+function MainTitleItalic({ text, fontSize, textColor = "text-[#CA9D75]" }: Prop) {
   return (
     <>
-      <p className={`${textColor} text-center ff-bohemienne text-[${section}px]`}>{text}</p>
+      <p className={`${textColor} text-center ff-bohemienne ${fontSize}`}>
+        {text}
+      </p>
     </>
   );
 }

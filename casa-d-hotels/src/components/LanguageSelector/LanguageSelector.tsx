@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 type languageOption = { language: string; code: string };
 

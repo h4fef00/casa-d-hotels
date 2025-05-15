@@ -1,6 +1,9 @@
 import QuoteLine from "../QuoteLine/QuoteLine";
+type Prop = {
+ quoteName: string
+}
 
-function Quote({ quoteName }) {
+function Quote({ quoteName }: Prop) {
   return (
     <>
       <QuoteLine />
