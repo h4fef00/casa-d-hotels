@@ -1,13 +1,11 @@
 // Translation
 import { Trans } from "react-i18next";
+// Types
+import { Prop } from "../../models/prop.type";
 // Components
 import MainTitleUpper from "../../components/MainTitleUpper/MainTitleUpper";
 // Images
 import LocationImg from "../../assets/icons/location_on.svg";
-
-type Prop = {
-  text: string[];
-};
 
 function CenterSection({ text }: Prop) {
   return (

@@ -1,14 +1,11 @@
+// Types
+import { Prop } from "../../models/prop.type";
 // Components
 import MainTitleItalic from "../../components/MainTitleItalic/MainTitleItalic";
 import MainTitleUpper from "../../components/MainTitleUpper/MainTitleUpper";
 import Quote from "../../components/Quote/Quote";
 // Layout components
 import Slider from "../Slider/Slider";
-
-type Prop = {
-  text: string[];
-};
-
 function CitySection({ text }: Prop) {
   return (
     <>

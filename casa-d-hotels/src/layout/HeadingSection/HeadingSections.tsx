@@ -1,13 +1,11 @@
+// Types
+import { Prop } from "../../models/prop.type";
 // Components
 import MainTitleItalic from "../../components/MainTitleItalic/MainTitleItalic";
 import MainTitleUpper from "../../components/MainTitleUpper/MainTitleUpper";
 import QuoteLine from "../../components/QuoteLine/QuoteLine";
 // Layout components
 import Header from "../header/Header";
-
-type Prop = {
-    text: string[]
-}
 
 function HeadingSections({text}:Prop) {
   return (
