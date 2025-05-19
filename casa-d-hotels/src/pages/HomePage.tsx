@@ -28,9 +28,11 @@ function HomePage() {
   ];
   const footerText = [
     "book",
+    "email",
     "phone",
     "whatsapp",
     "reception",
+    "opening",
     "breakfast",
     "hours-breakfast",
     "security",
@@ -52,7 +54,11 @@ function HomePage() {
       <SanciaSection text={sanciaText.map((text) => t(text))} />
       {/* hospitality */}
       <HospitalitySection text={hospitality.map((text) => t(text))} />
-      <Footer text={footerText}/>
+      <Footer
+        text={footerText.map((text) =>
+          text == "email" || text == "reception" ? text : t(text)
+        )}
+      />
     </>
   );
 }

@@ -1,4 +1,13 @@
 @import "tailwindcss";
+
+*,::before, ::after{
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+}
+
 /* fonts */
 @font-face {
   font-family: Futura PT;
@@ -27,6 +36,20 @@
 
 .ff-cormorant {
   font-family: "Cormorant Garamond";
+}
+
+.proportional-nums {
+  --tw-numeric-spacing: proportional-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero)
+    var(--tw-numeric-figure) var(--tw-numeric-spacing)
+    var(--tw-numeric-fraction);
+}
+
+.lining-nums {
+  --tw-numeric-figure: lining-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero)
+    var(--tw-numeric-figure) var(--tw-numeric-spacing)
+    var(--tw-numeric-fraction);
 }
 
 /* colors */
@@ -87,8 +110,8 @@
 .bg-ospitality {
   background-image: linear-gradient(180deg, #f9f0ec00 4.41%, #f9f0ec00 100%),
     url(./assets/images/hospitality2.jpg);
-    aspect-ratio: 1.55/1;
-    background-position: top center;
+  aspect-ratio: 1.55/1;
+  background-position: top center;
 }
 
 /* menu header */

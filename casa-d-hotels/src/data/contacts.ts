@@ -4,6 +4,7 @@ import { Contact } from "../models/contact.model";
 import geo from "../assets/icons/geo-position.svg";
 import phone from "../assets/icons/phone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
+import { FooterContacts } from "../models/footerContacts.model";
 export const CONTACTS: Contact[] = [
   new Contact(
     geo,
@@ -13,4 +14,16 @@ export const CONTACTS: Contact[] = [
   ),
   new Contact(phone, "Phone", "+39 081 01 97 852", "tel:+390810197852"),
   new Contact(whatsapp, "Whatsapp", "+39 340 60 07 575", "tel:+393406007575"),
+];
+export const FOOTER_CONTACTS: FooterContacts[] = [
+  new FooterContacts(
+    "email",
+    "info@casadhotels.com",
+    "mailto:info@casadhotels.com"
+  ),
+  new FooterContacts(
+    "email",
+    "info@casadhotels.com",
+    "mailto:info@casadhotels.com"
+  ),
 ];
