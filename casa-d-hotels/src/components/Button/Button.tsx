@@ -3,15 +3,12 @@ type Prop = {
   color?: string;
 };
 function Button({ text, color }: Prop) {
-  const isTan = color?.includes("bg-tan");
   return (
     <>
       <button
-        className={`${
-          !isTan ? color : "bg-tan"
-        } w-full uppercase
-       ff-futura text-xs font-[450] leading-[200%] tracking-[2px]
-      rounded-full flex items-center justify-center py-4 border border-tan transition-colors
+        className={`${color} w-full uppercase
+       ff-futura font-[450] tracking-[2px]
+      flex items-center justify-center py-4 border transition-colors
       duration-300`}
       >
         {text}

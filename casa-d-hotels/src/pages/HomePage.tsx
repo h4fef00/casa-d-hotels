@@ -19,7 +19,27 @@ function HomePage() {
     "interest",
   ];
   const sanciaText = ["casa-d-center", "discover-more"];
-  const hospitality = ["hospitality", "delicate", "balance", "of-warmth","of-form"];
+  const hospitality = [
+    "hospitality",
+    "delicate",
+    "balance",
+    "of-warmth",
+    "of-form",
+  ];
+  const footerText = [
+    "book",
+    "phone",
+    "whatsapp",
+    "reception",
+    "breakfast",
+    "hours-breakfast",
+    "security",
+    "night-security",
+    "checkin",
+    "checkout",
+    "pets",
+    "animals",
+  ];
   return (
     <>
       {/* header e prima section */}
@@ -32,7 +52,7 @@ function HomePage() {
       <SanciaSection text={sanciaText.map((text) => t(text))} />
       {/* hospitality */}
       <HospitalitySection text={hospitality.map((text) => t(text))} />
-      <Footer />
+      <Footer text={footerText}/>
     </>
   );
 }

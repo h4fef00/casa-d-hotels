@@ -48,7 +48,7 @@ function SanciaSection({text}:Prop) {
               />
             ))}
             <Button
-              color="bg-nightblue text-cream hover:!text-[#181d24] hover:!bg-transparent"
+              color="bg-nightblue border-tan text-cream text-xs hover:!text-[#181d24] hover:!bg-transparent leading-[200%] rounded-full"
               text={text[1]}
             ></Button>
           </div>
